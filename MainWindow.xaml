@@ -1,0 +1,178 @@
+﻿<Window x:Class="SeminarOOP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeminarOOP"
+        mc:Ignorable="d" FontSize="20"
+        Title="SEMINAR" Height="625" Width="1199.085" Background="DarkGray">
+    <Grid RenderTransformOrigin="0.526,0.469">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="27" Text="Insert your name below" Background="Aqua"
+                   Grid.ColumnSpan="3"
+                   Margin="0,0,0,10"/>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="First Name" FontWeight="SemiBold"
+                   Margin="0,0,10,10"/>
+
+
+
+        <TextBox x:Name="firstNameText" Grid.Column="2" Grid.Row="2" 
+              Width="180" />
+
+        <ComboBox Visibility="Hidden" x:Name="myComboBox" SelectionChanged="myComboBox_SelectionChanged" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Margin="0,39,0,247" Initialized="In">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Range}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Button x:Name="sumbitButton" IsDefault="True" Content="Run Me" Grid.Column="1" Grid.Row="3"
+                Grid.ColumnSpan="2" Margin="10" Click="sumbitButton_Click"/>
+
+        <CheckBox x:Name="CHX1" Visibility="Hidden" Content="Check all"  
+            Checked="CHX1_Checked" Unchecked="CHX1_Unchecked" Margin="44,19,412,13" Grid.Column="6" Grid.RowSpan="2"/>
+
+        <Viewbox Grid.Row="1" Grid.Column="6" Margin="5,42,506,269" Grid.RowSpan="5">
+            <StackPanel Height="73">
+                <CheckBox x:Name="CHX2" Visibility="Hidden" Checked="CHX2_Checked" Unchecked="CHX2_Unchecked" Margin="0,0,0,20" Content="Cars"/>
+                <CheckBox x:Name="CHX4" Visibility="Hidden" Checked="CHX4_Checked" Unchecked="CHX4_Unchecked" Content="Bikes"/>
+            </StackPanel>
+        </Viewbox>
+        <TextBlock x:Name="CPRB" Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Margin="0,57,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Choose price range below" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="268" Grid.RowSpan="7" Height="33" FontWeight="DemiBold"/>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="6" Margin="200,47,10,46" Grid.RowSpan="3" Grid.ColumnSpan="10">
+            <CheckBox x:Name="CHX2_0" Checked="CHX2_0_Checked"  Margin="0,0,5,0" Visibility="Hidden" Content="Bmw"/>
+            <CheckBox x:Name="CHX2_1" Checked="CHX2_1_Checked" Margin="25,0,10,0" Visibility="Hidden" Content="Audi"/>
+            <CheckBox x:Name="CHX2_2" Margin="25,0,10,0" Checked="CHX2_2_Checked" Visibility="Hidden" Content="Mercedes"/>
+            <CheckBox x:Name="CHX2_3" Margin="25,0,10,0" Checked="CHX2_3_Checked" Visibility="Hidden" Content="VW"/>
+            <CheckBox x:Name="CHX2_4" Margin="25,0,10,0" Checked="CHX2_4_Checked" Visibility="Hidden" Content="Rimac" Width="93"/>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="6" Margin="190,36,22,280" Grid.RowSpan="3" Grid.ColumnSpan="9">
+            <CheckBox x:Name="CHX4_0" Margin="25,0,10,0" Visibility="Hidden" Checked="CHX4_0_Checked" Content="Sport mtrcy."/>
+            <CheckBox x:Name="CHX4_1" Margin="35,0,10,0" Visibility="Hidden" Checked="CHX4_1_Checked" Content="Road mtrcy."/>
+            <CheckBox x:Name="CHX4_2" Margin="35,0,10,0" Visibility="Hidden" Checked="CHX4_2_Checked" Content="Scooter"/>
+        </StackPanel>
+
+        <ComboBox x:Name="myComboboxBMW" SelectionChanged="myComboboxBMW_SelectionChanged" Grid.Row="1" Visibility="Hidden" Grid.Column="6" Margin="200,47,416,29" Grid.RowSpan="2" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock  Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="myComboboxAUDI" SelectionChanged="myComboboxAUDI_SelectionChanged" Grid.Row="1" Visibility="Hidden" Grid.Column="6" Margin="306,47,310,29" Grid.RowSpan="2" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock x:Name="BMW_TB" Visibility="Hidden" Text="BMW" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="1" Margin="200,6,426,21"/>
+        <TextBlock x:Name="AUDI_TB" Visibility="Hidden" Text="Audi" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="1" Margin="306,6,316,21"/>
+        <TextBlock x:Name="MERCEDES_TB" Visibility="Hidden" Text="Mercedes" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="1" Margin="407,6,198,21"/>
+        <TextBlock x:Name="VW_TB" Visibility="Hidden" Text="VW" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="1" Margin="519,6,86,21"/>
+        <TextBlock x:Name="RIMAC_TB" Visibility="Hidden" Text="Rimac" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="1" Margin="628,6,0,21"/>
+        <TextBlock x:Name="SM_TB" Visibility="Hidden" Text="Sport" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="3" Margin="219,12,395,3"/>
+        <TextBlock x:Name="RM_TB" Visibility="Hidden" Text="Road" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="3" Margin="369,12,245,3"/>
+        <TextBlock x:Name="SCOOTER_TB" Visibility="Hidden" Text="Scooter" FontWeight="Bold" Background="LightBlue" Grid.Column="6" Grid.Row="3" Margin="502,12,112,3"/>
+        <ComboBox x:Name="myComboboxMERCEDES" Grid.Row="1" Visibility="Hidden" SelectionChanged="myComboboxMERCEDES_SelectionChanged" Grid.Column="6" Margin="418,47,198,29" Grid.RowSpan="2" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="myComboboxRIMAC" SelectionChanged="myComboboxRIMAC_SelectionChanged" Grid.Row="1" Visibility="Hidden" Grid.Column="6" Margin="620,47,0,29" Grid.RowSpan="2" RenderTransformOrigin="1.129,0.563" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="myComboboxVW" SelectionChanged="myComboboxVW_SelectionChanged" Grid.Row="1" Visibility="Hidden" Grid.Column="6" Margin="519,47,86,29" Grid.RowSpan="2" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="myComboboxSM" SelectionChanged="myComboboxSM_SelectionChanged" Grid.Row="5" Visibility="Hidden" Grid.Column="6" Margin="219,0,360,286" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="myComboboxRM" SelectionChanged="myComboboxRM_SelectionChanged" Grid.Row="5" Visibility="Hidden" Grid.Column="6" Margin="369,0,220,286" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="myComboboxSCOOTER" SelectionChanged="myComboboxSCOOTER_SelectionChanged" Grid.Row="5" Visibility="Hidden" Grid.Column="6" Margin="502,0,86,286" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Line}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ListView  x:Name="myListView"  Visibility="Hidden" Background="Gainsboro" Grid.Row="5" Grid.Column="6" Margin="20,182,198,51" >
+            <ListView.View>
+                <GridView AllowsColumnReorder="False">
+                    <GridViewColumn DisplayMemberBinding="{Binding Brand}" Header="Brand" Width="155"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Model}" Header="Model" Width="155"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Price}" Header="Price[€]" Width="163"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock x:Name="TB_B" Visibility="Hidden" Grid.Column="6" HorizontalAlignment="Left" Height="54" Margin="112,123,0,0" Grid.Row="5" TextWrapping="Wrap" Text="You have choosen:" VerticalAlignment="Top" Width="320" TextAlignment="Center" FontSize="28" FontWeight="Bold" Background="IndianRed"/>
+        <Button x:Name="B" Visibility="Hidden" Content="Reset" Grid.Column="6" HorizontalAlignment="Left" Height="42" Margin="542,194,0,0" Grid.Row="5" VerticalAlignment="Top" Width="119" Click="B_Click"/>
+        <TextBlock x:Name="B_B" Grid.Column="1" HorizontalAlignment="Left" Height="62" Margin="31,88,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Data reseted choose new  price range" VerticalAlignment="Top" Width="186" TextAlignment="Center" Background="LightSalmon" FontWeight="DemiBold" FontStyle="Italic" Visibility="Hidden" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

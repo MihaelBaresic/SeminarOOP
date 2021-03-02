@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeminarOOP", "SeminarOOP.csproj", "{E699C6F7-F8EB-4F08-A22E-43974E6A5821}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F2E4DC9-DBE4-46FA-A612-E2E6707BB669}"
+	ProjectSection(SolutionItems) = preProject
+		bin\Debug\Texts\Audi.txt = bin\Debug\Texts\Audi.txt
+		bin\Debug\Texts\Bmw.txt = bin\Debug\Texts\Bmw.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E699C6F7-F8EB-4F08-A22E-43974E6A5821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E699C6F7-F8EB-4F08-A22E-43974E6A5821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E699C6F7-F8EB-4F08-A22E-43974E6A5821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E699C6F7-F8EB-4F08-A22E-43974E6A5821}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D10CB44C-95CD-4724-BAD3-BCE52CC7FB46}
+	EndGlobalSection
+EndGlobal
